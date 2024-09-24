@@ -1,0 +1,25 @@
+{
+
+    "buttonSingInCG": ".nav-link > .mdc-button__ripple",
+    "usernameCG": "#dropdownMenuButton > .au-target",
+    
+    "loginContainerFirstShadowEmail": "[data-cy='email']",
+    "loginContainerFirstShadowPassword": "[data-cy='password']",
+    "loginContainerSecondShadow": "md-filled-text-field",
+    "loginContainerThirdShadow": "md-filled-field",
+
+    "loginContainerEmail": "md-filled-field", 
+    "signInButton": "[data-cy='sign-in']",
+
+    "selectAcountFirstShadow": "[data-cy='account-selector']",
+    "selectAccount": "#account-row",
+    "useDiferectAcount": "[data-cy='different-account']",
+
+    "forgotPasswLink": "[data-cy='forgot-password']",
+    "singinLink": "a[href='../sign-up']",
+
+    
+    "googleButton": "[data-cy='google']",
+    "appleButton": "[data-cy='apple']",
+    "discordButton": "[data-cy='discord']"
+}
