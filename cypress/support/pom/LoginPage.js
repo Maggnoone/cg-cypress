@@ -4,31 +4,35 @@ class Login {
 
     get = {
         endpoint: () => cy.visit('https://staging-user.chicksgroup.com/sign-in'),
-        usernameInput: () => {
+        usernameInput: () => 
             cy.get(LoginSelectors.loginContainerFirstShadowEmail)
-            .getElementByShadow(LoginSelectors.loginContainerSecondShadow)
-            .getElementByShadow(LoginSelectors.loginContainerThirdShadow)
-            .should('have.text', 'Enter email address');
-        },
-        passwordInput: () => {
+                .shadow()
+                .find(LoginSelectors.loginContainerSecondShadow)
+                .shadow()
+                .find(LoginSelectors.loginContainerThirdShadow)
+                ,
+        passwordInput: () => 
             cy.get(LoginSelectors.loginContainerFirstShadowPassword)
-            .getElementByShadow(LoginSelectors.loginContainerSecondShadow)
-            .getElementByShadow(LoginSelectors.loginContainerThirdShadow)
-            .should('have.text', 'Enter password');
-        },
+                .shadow()
+                .find(LoginSelectors.loginContainerSecondShadow)
+                .shadow()
+                .find(LoginSelectors.loginContainerThirdShadow)
+        ,
         submitButton: () => cy.get(LoginSelectors.signInButton),
     }
 
-    enterUsername() {
-        this.enterUsername().clear().type("Testing")
+    enterUsername(username) {
+        this.get.usernameInput().type(username)
     }
 
-    enterPassword() {
-        this.passwordInput().clear().type("Testing")
+    enterPassword(password) {
+        this.get.passwordInput().type(password)
     }
 
     submitLoginForm() {
-        this.submitButton().click()
+        this.get.submitButton().click()
     }
     
 }
+
+export const login = new Login;
