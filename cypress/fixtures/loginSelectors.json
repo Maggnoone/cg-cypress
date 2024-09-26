@@ -1,12 +1,13 @@
 {
 
-    "buttonSingInCG": ".nav-link > .mdc-button__ripple",
+    "buttonSingInCG": ".nav-link > [au-target-id='1687']",
     "usernameCG": "#dropdownMenuButton > .au-target",
     
     "loginContainerFirstShadowEmail": "[data-cy='email']",
     "loginContainerFirstShadowPassword": "[data-cy='password']",
     "loginContainerSecondShadow": "md-filled-text-field",
-    "loginContainerThirdShadow": "md-filled-field",
+    "loginEmailContainerThirdShadow": "md-filled-field > div.input-wrapper > input[type='email']",
+    "loginPasswordContainerThirdShadow": "md-filled-field > div.input-wrapper > input[type='password']",
 
     "loginContainerEmail": "md-filled-field", 
     "signInButton": "[data-cy='sign-in']",
