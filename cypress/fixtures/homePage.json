@@ -1,0 +1,37 @@
+{
+    "navBar": {
+        "currency": "[data-cy='currency']",
+        "items": "[data-cy='items']",
+        "accounts": "[data-cy='accounts']",
+        "services": "[data-cy='services']",
+        "more": "[data-cy='more']",
+        "sell": "[data-cy='sell']",
+        "currencyDropdown": "#cg-currency-dropdown"
+    },
+
+    "mainContent": {
+        "currency": "[data-cy='currency-option']",
+        "items": "[data-cy='items-option']",
+        "accounts": "[data-cy='accounts-option']",
+        "powerLeveling": "[data-cy='power-leveling']",
+        "goldSwap": "[data-cy='gold-swap']"
+    },
+
+    "gameCardContent": {
+        "lostArkGold": "#home > div:nth-child(4) > div.d-grid.game-card-container-main > cg-game-card-full:nth-child(1)",
+        "lostArkAccounts": "#home > div:nth-child(4) > div.d-grid.game-card-container-main > cg-game-card-full:nth-child(2)",
+        "wowGold": "#home > div:nth-child(4) > div.d-grid.game-card-container-main > cg-game-card-full:nth-child(3)",
+        "wowAccounts": "#home > div:nth-child(4) > div.d-grid.game-card-container-main > cg-game-card-full:nth-child(4)"
+  },
+
+    "gameCards": {
+        "lostArk": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-main > cg-game-card-small:nth-child(1) > a",
+        "wowClassic": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-main > cg-game-card-small:nth-child(2) > a",
+        "diabloll": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-main > cg-game-card-small:nth-child(3) > a",
+        "escapeFromTarkov": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-second > cg-game-card-small:nth-child(1) > a",
+        "finalFantasy": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-second > cg-game-card-small:nth-child(2) > a",
+        "pathOfExile": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-second > cg-game-card-small:nth-child(3) > a",
+        "fortnite": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-second > cg-game-card-small:nth-child(4) > a"
+  }
+
+}
