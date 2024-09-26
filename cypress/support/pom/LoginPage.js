@@ -2,24 +2,9 @@ import LoginSelectors from "../../fixtures/loginSelectors.json"
 
 
 class Login {
-
-    get = {
-        endpoint: () => cy.visit('https://staging.chicksgold.com'),
-        usernameInput: () => 
-            cy.get(LoginSelectors.loginContainerFirstShadowEmail)
-                .shadow()
-                .find(LoginSelectors.loginContainerSecondShadow)
-                .shadow()
-                .find(LoginSelectors.loginContainerThirdShadow)
-                ,
-        passwordInput: () => 
-            cy.get(LoginSelectors.loginContainerFirstShadowPassword)
-                .shadow()
-                .find(LoginSelectors.loginContainerSecondShadow)
-                .shadow()
-                .find(LoginSelectors.loginContainerThirdShadow)
-        ,
-        submitButton: () => cy.get(LoginSelectors.signInButton),
+    
+    visitCG() {
+        cy.visit('https://staging.chicksgold.com')
     }
 
     enterUsername(username) {
@@ -64,9 +49,10 @@ class Login {
 
     fullFillLoginForm(username, password) {
         
-            this.enterUsername(username);
-            this.enterPassword(password);
-            this.submitLoginForm();
+        this.visitCG()
+        this.enterUsername(username);
+        this.enterPassword(password);
+        this.submitLoginForm();
             
     }
     
