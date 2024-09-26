@@ -1,9 +1,10 @@
 import LoginSelectors from "../../fixtures/loginSelectors.json"
 
+
 class Login {
 
     get = {
-        endpoint: () => cy.visit('https://staging-user.chicksgroup.com/sign-in'),
+        endpoint: () => cy.visit('https://staging.chicksgold.com'),
         usernameInput: () => 
             cy.get(LoginSelectors.loginContainerFirstShadowEmail)
                 .shadow()
@@ -22,15 +23,51 @@ class Login {
     }
 
     enterUsername(username) {
-        this.get.usernameInput().type(username)
+        cy.origin(
+            "https://staging-user.chicksgroup.com/sign-in",
+            { args: { username, LoginSelectors } },
+            ({ username, LoginSelectors }) => {
+                cy.get(LoginSelectors.loginContainerFirstShadowEmail)
+                    .shadow()
+                    .find(LoginSelectors.loginContainerSecondShadow)
+                    .shadow()
+                    .find(LoginSelectors.loginEmailContainerThirdShadow)
+                    .clear().type(username);
+            }
+        );
     }
-
+    
     enterPassword(password) {
-        this.get.passwordInput().type(password)
+        cy.origin(
+            "https://staging-user.chicksgroup.com/sign-in",
+            { args: { password, LoginSelectors } },
+            ({ password, LoginSelectors }) => {
+                cy.get(LoginSelectors.loginContainerFirstShadowPassword)
+                    .shadow()
+                    .find(LoginSelectors.loginContainerSecondShadow)
+                    .shadow()
+                    .find(LoginSelectors.loginPasswordContainerThirdShadow)
+                    .clear().type(password);
+            }
+        );
     }
 
     submitLoginForm() {
-        this.get.submitButton().click()
+        cy.origin(
+            "https://staging-user.chicksgroup.com/sign-in",
+            { args: { LoginSelectors } },
+            ({ LoginSelectors }) => {
+                cy.get(LoginSelectors.signInButton).click();
+            }
+        );
+    }
+
+    fullFillLoginForm(username, password) {
+        
+            this.enterUsername(username);
+            this.enterPassword(password);
+            this.submitLoginForm();
+            
     }
     
 }
