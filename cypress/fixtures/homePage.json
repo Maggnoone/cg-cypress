@@ -32,6 +32,34 @@
         "finalFantasy": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-second > cg-game-card-small:nth-child(2) > a",
         "pathOfExile": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-second > cg-game-card-small:nth-child(3) > a",
         "fortnite": "#home > div:nth-child(5) > div.d-none.d-lg-grid.game-card-small-second > cg-game-card-small:nth-child(4) > a"
+  },
+
+  "footer": {
+    "chicksGold": {
+        "aboutUS": "#cg-footer-section > div > a.au-target.about-us",
+        "blog": "#cg-footer-section > div > a.au-target.blog",
+        "bugBounty": "#cg-footer-section > div > a.au-target.bug-bounty"
+    },
+
+    "support": {
+        "contactUS": "#cg-footer-section > div > a.au-target.contact-us",
+        "faq": "#cg-footer-section > div > a.au-target.faq",
+        "siteMap": "#cg-footer-section > div > a.au-target.sitemap"
+    },
+
+    "legal": {
+        "privacyPolicy": "#cg-footer-section > div > a.au-target.privacy-policy",
+        "termsOfService": "#cg-footer-section > div > a.au-target.terms-of-service",
+        "copyrightPolicy": "#cg-footer-section > div > a.au-target.copyright-policy"
+    },
+
+    "social": {
+        "discord": "#social-media > cg-touch-target:nth-child(1) > a",
+        "instagram": "#social-media > cg-touch-target:nth-child(2) > a",
+        "twitter": "#social-media > cg-touch-target:nth-child(3) > a",
+        "facebook": "#social-media > cg-touch-target:nth-child(4) > a",
+        "trustPilotReviews": "#footer > div > div > div.section.section-extra.mt-regular > div.trustpilot-reviews > a"
+    }
   }
 
 }
