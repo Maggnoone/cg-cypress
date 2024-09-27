@@ -108,6 +108,45 @@ class HomePage {
         cy.get(HomePageSelectors.gameCards.fortnite).contains(/Fortnite/i).click()
         this.returnHome()
     }
+
+    clickCGFooterElements() {
+        cy.wait(3000)
+        
+        cy.get(HomePageSelectors.footer.chicksGold.aboutUS).click({force: true})
+        cy.wait(3000)
+        
+        cy.get(HomePageSelectors.footer.chicksGold.blog).click({force: true})
+        cy.wait(3000)
+
+        cy.get(HomePageSelectors.footer.chicksGold.bugBounty).click({force: true})
+
+    }
+
+    clickLegalFooterElements() {
+        cy.wait(3000)
+
+        cy.get(HomePageSelectors.footer.legal.copyrightPolicy).click({force: true})
+        cy.wait(3000)
+
+        cy.get(HomePageSelectors.footer.legal.privacyPolicy).click({force: true})
+        cy.wait(3000)
+
+        cy.get(HomePageSelectors.footer.legal.termsOfService).click({force: true})
+
+    }
+
+    clickSupportFooterElements() {
+        cy.wait(3000)
+
+        cy.get(HomePageSelectors.footer.support.contactUS).click({force: true})
+        cy.wait(3000)
+
+        cy.get(HomePageSelectors.footer.support.faq).click({force: true})
+        cy.wait(3000)
+
+        cy.get(HomePageSelectors.footer.support.siteMap).click({force: true})
+
+    }
         
 }
 
