@@ -31,56 +31,87 @@ class HomePage {
         cy.wait(3000)
 
         cy.get(HomePageSelectors.navBar.currency).contains(/Currency/i).click()
-        this.returnHome()
+        cy.wait(3000)
+        cy.url().should("include", "https://staging.chicksgold.com/currency");
+        cy.wait(3000)
 
         cy.get(HomePageSelectors.navBar.items).contains(/Items/i).click()
-        this.returnHome()
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/items');
+        cy.wait(3000)
 
         cy.get(HomePageSelectors.navBar.accounts).contains(/Accounts/i).click()
-        this.returnHome()
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/accounts');
+        cy.wait(3000)
         
         cy.get(HomePageSelectors.navBar.services).contains(/Services/i).click()
-        this.returnHome()
-
-        cy.get(HomePageSelectors.navBar.more).contains(/More/i).click()
-        this.returnHome()
-
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/services');
+        cy.wait(3000)
+        
         cy.get(HomePageSelectors.navBar.sell).contains(/Sell/i).click()
-        this.returnHome()
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/sell/currency');
+        cy.wait(3000)
     }
 
     clickMainContentElements() {
         cy.wait(3000)
-
-        cy.get(HomePageSelectors.mainContent.currency).contains(/Currency/i).click()
-        this.returnHome()
-
-        cy.get(HomePageSelectors.mainContent.items).contains(/Items/i).click()
-        this.returnHome()
-
-        cy.get(HomePageSelectors.mainContent.accounts).contains(/Accounts/i).click()
-        this.returnHome()
         
-        cy.get(HomePageSelectors.mainContent.powerLeveling).contains(/Power Leveling/i).click()
-        this.returnHome()
-
-        cy.get(HomePageSelectors.mainContent.goldSwap).contains(/Gold Swap/i).click()
-        this.returnHome()
-    }
+        cy.get(HomePageSelectors.mainContent.currency).contains(/Currency/i).click();
+        cy.wait(3000)
+        cy.url().should("include", "https://staging.chicksgold.com/currency");
+        this.returnHome();
+        cy.url().should("include", "https://staging.chicksgold.com/");
+        
+        cy.get(HomePageSelectors.mainContent.items).contains(/Items/i).click();
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/items');
+        this.returnHome();
+        cy.url().should("include", "https://staging.chicksgold.com/");
+        
+        cy.get(HomePageSelectors.mainContent.accounts).contains(/Accounts/i).click();
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/accounts');
+        this.returnHome();
+        cy.url().should("include", "https://staging.chicksgold.com/");
+        
+        cy.get(HomePageSelectors.mainContent.powerLeveling).contains(/Power Leveling/i).click();
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/services');
+        this.returnHome();
+        cy.url().should("include", "https://staging.chicksgold.com/");
+        
+        cy.get(HomePageSelectors.mainContent.goldSwap).contains(/Gold Swap/i).click();
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/swap');
+        this.returnHome();
+        cy.url().should("include", "https://staging.chicksgold.com/");
+   }
+   
 
     clickGameCardContentElements() {
         cy.wait(3000)
 
         cy.get(HomePageSelectors.gameCardContent.lostArkGold).contains(/Lost Ark Gold/i).click()
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/currency/buy-lost-ark-gold');
         this.returnHome()
 
         cy.get(HomePageSelectors.gameCardContent.lostArkAccounts).contains(/Lost Ark Accounts/i).click()
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/accounts/lost-ark-accounts-for-sale');
         this.returnHome()
 
         cy.get(HomePageSelectors.gameCardContent.wowGold).contains(/Wow Classic Gold/i).click()
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/currency/buy-wow-classic-gold');
         this.returnHome()
         
         cy.get(HomePageSelectors.gameCardContent.wowAccounts).contains(/Wow Classic Accounts/i).click()
+        cy.wait(3000)
+        cy.url().should("include", 'https://staging.chicksgold.com/accounts/buy-wow-classic-accounts');
         this.returnHome()
     }
 
