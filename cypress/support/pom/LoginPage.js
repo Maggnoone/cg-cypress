@@ -2,9 +2,9 @@ import LoginSelectors from "../../fixtures/loginSelectors.json"
 
 
 class Login {
-    
+
     visitCG() {
-        cy.visit('https://staging.chicksgold.com')
+        cy.visit('https://staging.chicksgold.com/')
     }
 
     enterUsername(username) {
@@ -49,7 +49,6 @@ class Login {
 
     fullFillLoginForm(username, password) {
         
-        this.visitCG()
         this.enterUsername(username);
         this.enterPassword(password);
         this.submitLoginForm();
@@ -59,3 +58,4 @@ class Login {
 }
 
 export const login = new Login;
+
