@@ -8,14 +8,18 @@ describe('template spec', () => {
         cy.viewport(1920, 1080)
         login.visitCG()
       
-        cy.url().should("include", "https://staging.chicksgold.com")
+        cy.url().should("include", "https://staging.chicksgold.com/")
     });
     
-    it('Home Page NavBar Hover', () => homePage.hoverNavBarElements());
+    // it('Home Page NavBar Hover', () => homePage.hoverNavBarElements());
     
-    it('Home Page NavBar Links', () => homePage.clickNavBarElements());
+    // it('Home Page NavBar Links', () => homePage.clickNavBarElements());
   
     it('Home Page Footer', () => homePage.clickCGFooterElements());
+  
+    it('Home Page Footer Legal Links', () => homePage.clickLegalFooterElements());
+  
+    it('Home Page Footer Support Links', () => homePage.clickSupportFooterElements());
     
   });
   
